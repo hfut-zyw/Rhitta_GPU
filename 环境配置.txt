@@ -1,0 +1,24 @@
+numpy，pandas，matplotlib，sklearn这些包随便装，版本随意
+
+cupy如果在conda里面安装，会自动给你安装好cupy本身以及依赖包cudatoolkit和cudnn，
+其中cupy在你所在环境中，比如我的是C:\ProgramData\anaconda3\envs\mynet38，后面的路径就不说了
+另外两个在conda的pkg文件夹下，我的是 C:\ProgramData\anaconda3\pkgs
+
+总之，使用conda直接搜索，然后安装，是能够直接运行的
+
+
+一些问题：
+比如我安装好后，用conda命令删除cupy，但是发现pkg下面的依赖没有删除，导致我手动使用pip安装其他版本的cupy时，
+即便系统里已经安装了对应的cudatoolkit和cudnn (C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA) ,并且环境
+变量也配置了（cmd下使用nvcc -V 可以查看），但是import cupy依然报错
+
+解决方法：退出conda，然后手动把那两个东西删除
+
+然后进入环境，使用 conda install -c conda-forge cupy cudatoolkit=11.8  直接一次性安装所有需要的包
+
+注意11.8是我系统里安装的cuda版本
+
+
+查询显卡最高支持的cuda版本：nvidia-smi
+查看系统里已经安装的cuda版本：nvcc -V
+cupy官方安装说明：https://docs.cupy.dev/en/latest/install.html#install-cupy-from-conda-forge
