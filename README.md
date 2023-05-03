@@ -51,5 +51,4 @@
 
 [https://hfut-zyw.github.io/2023/04/16/pytorch/autograd/](https://hfut-zyw.github.io/2023/04/16/pytorch/autograd/)
 
-<img src="/img-pytorch/AutoGrad3.png" style="zoom:100%;" /> 
 
